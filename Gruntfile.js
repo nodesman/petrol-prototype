@@ -83,6 +83,15 @@ module.exports = function(grunt) {
       }
     },
 
+    htmlclean: {
+      deploy: {
+        expand: true,
+        cwd: 'dist/',
+        src: '**/*.html',
+        dest: 'dist/'
+      }
+    },
+
     uglify: {
       options: {
         mangle: false
@@ -113,13 +122,15 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('assemble');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-htmlclean');
 
   grunt.registerTask('build', [
     'clean',
     'copy',
     'uglify',
     'sass',
-    'assemble'
+    'assemble',
+    'htmlclean'
   ]);
 
   grunt.registerTask('default', [
