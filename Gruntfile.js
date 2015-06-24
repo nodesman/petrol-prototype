@@ -82,6 +82,17 @@ module.exports = function(grunt) {
         }]
       }
     },
+
+    uglify: {
+      options: {
+        mangle: false
+      },
+      dist: {
+        files: {
+          'dist/assets/js/all.js': ['src/assets/js/jquery.min.js', 'bower_components/bootstrap/dist/js/bootstrap.min.js']
+        }
+      }
+    },
     sass: {
       dist: {
         options: {
@@ -101,10 +112,12 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('assemble');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
 
   grunt.registerTask('build', [
     'clean',
     'copy',
+    'uglify',
     'sass',
     'assemble'
   ]);
