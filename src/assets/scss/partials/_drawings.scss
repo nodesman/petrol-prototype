@@ -1,0 +1,58 @@
+.drawings-table {
+  td a.link {
+    cursor: pointer;
+  }
+
+  th, td {
+    input{
+      text-align: right;
+    }
+  }
+
+  td.delivery-job-status {
+    min-width: 110px;
+  }
+  th.sta-column {
+    white-space: nowrap;
+  }
+}
+
+.normal-text {
+  font-weight: normal;
+}
+.filter-row {
+   button {
+    height: 33px;
+  }
+}
+
+.text-danger {
+  .tooltip-inner {
+    background-color: #a94442;
+  }
+
+  .tooltip.top .tooltip-arrow {
+    border-top-color: #a94442;
+  }
+}
+
+.logistics-content {
+  .date.form-control {
+    height: auto;
+    display: inline-block;
+    float: left;
+    width: auto;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+  .filters-row {
+    margin-top: 25px;
+  }
+}
+
+.footer-hack {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

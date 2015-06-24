@@ -1,0 +1,26 @@
+@import "../modules/table";
+
+.hide-previous-week-button, .hide-next-week-button, .hide-newly-saved-rates-message, .hide-edit-fx-rate, .hide-edit-product-price {
+  display: none;
+}
+
+.summary-table {
+  @include summary-table;
+
+  .trend-negative {
+    color: #a94442;
+  }
+
+  .trend-positive {
+    color: #3c763d;
+  }
+
+  .bank-holiday {
+    color:#999;
+    cursor:help;
+  }
+}
+
+.bg-default {
+  background-color: #f5f5f5;
+}

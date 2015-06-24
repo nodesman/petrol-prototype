@@ -1,0 +1,52 @@
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding-top: $navbar-height + 10px;
+}
+
+.navigation img {
+  display: inline-block;
+}
+
+.navigation .title {
+  display: inline-block;
+  margin-left: 0.5em;
+}
+
+
+
+@mixin menu-item($itemClass) {
+  .#{$itemClass} {
+    li.menu-item.#{$itemClass} {
+      @extend .active
+    }
+    li.sub-menu-item.#{$itemClass} {
+      @extend .active
+    }
+  }
+}
+
+// This is required to highlight the active page
+@include menu-item("terminal-advice");
+@include menu-item("daily-summary");
+@include menu-item("inventory");
+@include menu-item("rtfo-rates");
+@include menu-item("vat-rates");
+@include menu-item("duty");
+@include menu-item("product-prices");
+@include menu-item("exchange-rates");
+@include menu-item("drawings");
+@include menu-item("accounts");
+@include menu-item("reports");
+@include menu-item("retailPrices");
+
+.nav .hide-sub-menu-item, .nav-pills .hide-sub-menu-item .hide-main-menu-item {
+  display: none;
+}
+
+[v-cloak] { display: none }

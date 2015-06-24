@@ -1,0 +1,19 @@
+.application-alert-loading {
+    border: 1px solid transparent;
+    border-radius: 4px;
+    width: 20%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 99;
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    color: #FFFFFF;
+    background-color: #006655;
+    top: 50%;
+}

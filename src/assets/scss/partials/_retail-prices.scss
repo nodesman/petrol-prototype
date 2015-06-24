@@ -1,0 +1,23 @@
+.retail-prices {
+  .data-table {
+    th, td {
+      text-align: center;
+    }
+
+    td {
+      width: 6.66%;
+    }
+
+    td:first-child {
+      width: 20%;
+      text-align: left;
+      font-weight: bold;
+      border-left: none;
+    }
+
+    td {
+      $borderStyle: 1px solid #DDD;
+      border-left: $borderStyle;
+    }
+  }
+}

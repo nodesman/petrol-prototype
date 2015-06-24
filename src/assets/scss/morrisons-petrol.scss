@@ -1,0 +1,73 @@
+//import configuration
+@import "configuration/colours";
+@import "configuration/bootstrapconfig";
+//import external dependencies
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+@import "bootstrap/normalize";
+@import "bootstrap/glyphicons";
+@import "bootstrap/scaffolding";
+@import "bootstrap/type";
+@import "bootstrap/grid";
+@import "bootstrap/tables";
+@import "bootstrap/forms";
+@import "bootstrap/buttons";
+@import "bootstrap/component-animations";
+@import "bootstrap/dropdowns";
+@import "bootstrap/button-groups";
+@import "bootstrap/input-groups";
+@import "bootstrap/navs";
+@import "bootstrap/navbar";
+@import "bootstrap/labels";
+@import "bootstrap/badges";
+@import "bootstrap/alerts";
+@import "bootstrap/close";
+@import "bootstrap/modals";
+@import "bootstrap/tooltip";
+@import "bootstrap/utilities";
+
+@import "modules/fixed_height_table";
+
+//import partials
+@import "partials/navigation";
+@import "partials/login";
+@import "partials/daily-summary";
+@import "partials/edit-form";
+@import "partials/vat-rates";
+@import "partials/rtfo-rates";
+@import "partials/duty";
+@import "partials/terminal-advice";
+@import "partials/inventory";
+@import "partials/drawings";
+@import "partials/account-payable";
+@import "partials/delivery-job";
+@import "partials/ionicons";
+@import "partials/create-delivery-job";
+@import "partials/common";
+@import "partials/retail-prices";
+@import "partials/logistics";
+
+@import "vendor/date-picker";
+
+$ionicons-font-path: "/assets/fonts/ionicons";
+@import "vendor/ionicons/ionicons";
+
+
+.toast {
+  width: 400px;
+  text-align: center;
+  position: absolute;
+  z-index: 10000;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 50px;
+}
+
+.message-container {
+  z-index: 10000;
+  div {
+    @extend .alert;
+    @extend .toast;
+  }
+}

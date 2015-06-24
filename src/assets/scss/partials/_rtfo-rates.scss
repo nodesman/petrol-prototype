@@ -1,0 +1,17 @@
+.hide-add-rtfo-rate {
+  display: none;
+}
+
+.rtfo-rate-table {
+  td th {
+    text-align: left;
+  }
+
+  th:nth-child(2) {
+    text-align: right;
+  }
+
+  td:nth-child(2) {
+    text-align: right;
+  }
+}

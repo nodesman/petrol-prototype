@@ -1,0 +1,33 @@
+.import-box {
+  padding: 9px 9px 0;
+  margin-bottom: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #e3e3e3;
+  border-radius: 3px;
+}
+
+.pull-right {
+  float: right;
+}
+
+.search-box {
+  top: 49px;
+}
+
+.remove-circle {
+  position: absolute;
+  right: 14px;
+  top: 2px;
+  z-index: 2;
+  border: transparent;
+  background: transparent;
+}
+
+.vbo-table {
+  td, th {
+    text-align: right;
+    &:first-child {
+      text-align: left;
+    }
+  }
+}

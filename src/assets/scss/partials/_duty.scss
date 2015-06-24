@@ -1,0 +1,25 @@
+.duty-table {
+  th {
+    width: 7.5%;
+    white-space: normal;
+    text-align: right;
+  }
+
+  th:first-child, th:last-child {
+    width: 12.5%;
+    text-align: left;
+  }
+
+  td {
+    text-align: right;
+  }
+
+  td:first-child, td:last-child {
+    text-align: left;
+  }
+}
+
+.product-description {
+  @extend .help-block;
+  font-weight: normal;
+}

@@ -1,0 +1,18 @@
+@import "../modules/table";
+
+.hide-previous-week-button, .hide-next-week-button, .hide-terminal-advice-edit-link {
+  display: none;
+}
+
+.terminal-advice-table {
+
+  @include summary-table;
+
+  th:first-child {
+    text-align: left;
+  }
+
+  tr td:first-child {
+    text-align: left;
+  }
+}
