@@ -1,6 +1,9 @@
 //import configuration
 @import "configuration/colours";
 @import "configuration/bootstrapconfig";
+@import "configuration/constants";
+@import "altitude";
+
 //import external dependencies
 @import "bootstrap/variables";
 @import "bootstrap/mixins";
@@ -26,7 +29,9 @@
 @import "bootstrap/tooltip";
 @import "bootstrap/utilities";
 
-@import "modules/fixed_height_table";
+@import "mixins";
+@import "framework";
+@import "layout";
 
 //import partials
 @import "partials/navigation";
@@ -38,30 +43,80 @@
 @import "partials/duty";
 @import "partials/terminal-advice";
 @import "partials/inventory";
+@import "partials/margin_calculations";
 @import "partials/drawings";
 @import "partials/account-payable";
 @import "partials/delivery-job";
 @import "partials/ionicons";
 @import "partials/create-delivery-job";
+@import "partials/temp-report";
 @import "partials/common";
 @import "partials/retail-prices";
 @import "partials/logistics";
+@import "partials/bunker-prices";
+@import "partials/table-monitor-terminal-liftings";
+@import "partials/price-change";
 
 @import "vendor/date-picker";
+@import "components/import_box";
 
 $ionicons-font-path: "/assets/fonts/ionicons";
 @import "vendor/ionicons/ionicons";
 
+.navbar-fixed-top {
+  z-index: $navigation-bar-zIndex;
+}
+.dropdown-menu {
+  z-index: $navigation-dropdown-menu;
+}
+.navbar-nav.nav {
+  li.selected {
+    background-color: #14806E;
+  }
 
+  > li.menu-item:hover {
+    background-color: #194D44;
+  }
+  > li.menu-item.open > a {
+    background-color: #4AA193;
+    color: #fff;
+  }
+  .configuration-option {
+    .glyphicon {
+      margin-right: 4px;
+      display: inline-block;
+      vertical-align: text-top;
+    }
+  }
+
+  li ul li.selected {
+    background-color: #C5C5C5;
+  }
+  .menu-item {
+    cursor: pointer;
+  }
+}
+
+.modal-backdrop {
+  z-index: $modal-backdrop-index;
+}
+
+.modal-dialog {
+  z-index: $modal-dialog-index;
+}
+
+.form-group .form-control {
+  z-index: $form-control-zIndex;
+}
 .toast {
   width: 400px;
   text-align: center;
-  position: absolute;
+  position: fixed;
   z-index: 10000;
   left: 0;
   right: 0;
   margin: auto;
-  bottom: 50px;
+  top: 54px;
 }
 
 .message-container {

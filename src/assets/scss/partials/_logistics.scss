@@ -1,10 +1,33 @@
 .logistics-container {
   &.container-fluid {
     padding: 0;
-    margin: 0 -10px;
+    margin: 0;
   }
+  .toolbar-container {
+    .help-block {
+      padding: 10px 15px;
+      margin: 0;
+    }
+  }
+
+
+
+
 
   .padded {
     margin: 0 10px;
+  }
+
+  .load-more-button {
+    margin: 30px auto;
+    width: 20%;
+    display: block;
+  }
+
+  td.field-fill {
+    input[type=text] {
+      width: 100%;
+      margin: 0 auto;
+    }
   }
 }

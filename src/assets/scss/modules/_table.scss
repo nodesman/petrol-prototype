@@ -18,6 +18,7 @@
 .sticky-table-headers {
   thead {
     background-color: $background;
+    z-index: $fixed-header-zIndex !important;
   }
 }
 

@@ -9,37 +9,56 @@
     </div>
     <div class="retailPrices">
       <ul class="nav navbar-nav navbar-left">
-        <li class="menu-item terminal-advice"><a href=" dist/terminal-advice/latest">Pricing</a></li>
-        <li class="menu-item daily-summary"><a href="dist/daily-summary/latest">Markets</a></li>
-        <li class="menu-item inventory"><a href="dist/view/inventory">Inventory</a></li>
-        <li class="menu-item drawings"><a href="dist/view/drawings">Logistics</a></li>
-        <li class="menu-item retailPrices"><a href="dist/view/retail-prices">Retail Prices</a></li>
-        <li class="menu-item accounts" style="display: none;">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="display: none;">Accounts <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li class="menu-item weeklyVolumes" style="display: none;"><a href="dist/view/accounts/weekly-volumes">Weekly volumes</a></li>
-            <li class="menu-item grni" style="display: none;"><a href="dist/view/accounts/grni">GRNI report</a></li>
+        <li class="menu-item {{#if pricingActive}} selected {{/if}}"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Pricing <span class="caret"></span></a>
+          <ul class="dropdown-menu " role="menu">
+            <li><a href="/terminal-advice/latest">Terminal Advice</a></li>
+            <li><a href="/view/retail-prices">Retail prices</a></li>
+            <li><a href="/view/retail-prices/price-change">Price change</a></li>
+            <li><a href="/view/bunker-prices">Bunker Prices</a></li>
           </ul>
         </li>
-        <li class="menu-item reports">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">Reports <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="/view/reports/temperature-monitoring">Temperature Monitoring</a></li>
-            <li><a href="/view/reports/terminal-liftings">Monitor Liftings</a></li>
+        <li class="dropdown menu-item daily-summary">
+          <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Costs <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/daily-summary/latest">Daily Summary</a></li>
+            <li><a href="/product-prices/latest">Product Prices</a></li>
+            <li><a href="/exchange-rates/latest">Exchange Rates</a></li>
           </ul>
         </li>
-        <li class="menu-item bunkerPrices">
-          <a href="/view/bunker-prices">Bunker Prices</a>
+        <li class="menu-item">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Stock Movement <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="/view/drawings">Liftings</a></li>
+            <li><a href="/view/inventory">Inventory</a></li>
+            <li><a href="/view/bunker-volume">Bunker Volume</a></li>
+          </ul>
+        </li>
+        <li class="menu-item" style="display: none;">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Accounts <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="/view/accounts/agreed-deliveries">Weekly volumes</a></li>
+            <li><a href="/view/accounts/grni">GRNI report</a></li>
+          </ul>
+        </li>
+        <li class="menu-item">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Reports <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="/view/margin-calculations">Margin</a></li>
+            <li><a href="/view/reports/temperature-monitoring">STA Report</a></li>
+            <li><a href="/view/reports/terminal-liftings">Drawings Report</a></li>
+          </ul>
         </li>
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+        <li class="menu-item dropdown">
+          <a class="configuration-option dropdown-toggle" data-toggle="dropdown" href="#">
             <span class="glyphicon glyphicon-cog"></span>Configuration <span class="caret"></span>
           </a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="/vat-rates">Manage regulatory data</a></li>
+            <li><a href="/vat-rates">VAT Rates</a></li>
+            <li><a href="/rtfo-rates">RTFO Rates</a></li>
+            <li><a href="/duty">Duty Rates</a></li>
           </ul>
         </li>
         <li><a href="/access/logout">Sign out</a></li>

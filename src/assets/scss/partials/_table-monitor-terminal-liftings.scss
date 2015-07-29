@@ -1,0 +1,21 @@
+@import "../modules/table";
+
+.table-monitor-terminal-liftings {
+  @include summary-table;
+  first-child {
+    text-align: left;
+  }
+
+  th:first-child {
+    text-align: left;
+  }
+
+  tr td:first-child {
+    text-align: left;
+  }
+
+  tfoot > tr > td {
+    border-top-width: 2px;
+    font-weight: bold;
+  }
+}

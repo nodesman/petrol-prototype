@@ -1,0 +1,50 @@
+.price-change {
+    margin-top: -9px;
+    .toolbar {
+        min-height: 20px;
+        padding: 9px 0;
+        background-color: #f8f8f8;
+        border-bottom: 1px solid #e7e7e7;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+                box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+        .form-control {
+            z-index: $form-control-zIndex;
+        }
+    }
+
+    .table-price-change {
+        @include summary-table;
+
+        thead > tr > th {
+            text-align: left;
+        }
+
+        tbody > tr > td:first-child {
+            text-align: left;
+        }
+
+        tbody > tr:first-child {
+            background-color: #f8f8f8;
+        }
+
+        thead, tbody {
+            > tr > td:first-child {
+                border-left: 0;
+            }
+            > tr > td {
+                border-left: 1px solid #ddd;
+            }
+            > tr > td.block-start {
+                border-left: 3px solid #ddd;
+            }
+        }
+
+        thead > tr > th.fuel-grade {
+            border-left: 3px solid #ddd;
+        }
+
+        thead.tableFloatingHeaderOriginal {
+            border-bottom: 1px solid #eee;
+        }
+    }
+}

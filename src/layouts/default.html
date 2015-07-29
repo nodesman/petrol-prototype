@@ -12,5 +12,9 @@
   {{>nav}}
 </div>
  {{body}}
+
+{{#each scripts}}
+  <script src="assets/js/{{.}}"></script>
+{{/each}}
 </body>
 </html>

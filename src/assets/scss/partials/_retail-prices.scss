@@ -1,7 +1,26 @@
 .retail-prices {
+
+  .price-point-distribution {
+    white-space: nowrap;
+    > .item {
+      display: inline-block;
+      vertical-align: top;
+      float: none;
+    }
+  }
   .data-table {
-    th, td {
+    td {
+      text-align: right;
+    }
+    th {
       text-align: center;
+    }
+
+    td.next-day {
+      border-right: 1px solid #8A8A8A;
+      &:last-child {
+        border-right: none;
+      }
     }
 
     td {
@@ -20,4 +39,14 @@
       border-left: $borderStyle;
     }
   }
+
+  .price-point {
+    td:first-child {
+      width: 20%;
+      text-align: right;
+      font-weight: bold;
+      border-left: none;
+    }
+  }
 }
+
