@@ -4,6 +4,43 @@
 }
 .retail-prices {
 
+  .prices-distribution {
+    padding: 50px 100px;
+    text-align: center;
+  }
+  .fuel-grade-distribution + .fuel-grade-distribution {
+    margin-left: 50px;
+  }
+  .fuel-grade-distribution {
+    display: inline-block;
+
+    .fuel-grade {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+    table {
+      tr {
+        &:nth-child(2n) {
+          background-color: #eee;
+        }
+        td, th {
+          &:first-child {
+            width: 100px;
+            text-align: left !important;
+          }
+
+
+          padding: 10px 20px;
+          text-align: right !important;
+        }
+      }
+    }
+  }
+
+  .fuel-grade {
+    text-align: center;
+  }
   .prices-list-tab {
   }
 
@@ -11,6 +48,14 @@
     height: 600px;
     width: 100%;
     overflow: auto;
+    table {
+      th {
+        text-align: center;
+      }
+      th,td {
+        padding: 10px 20px;
+      }
+    }
   }
 
   .hot {
