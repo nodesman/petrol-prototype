@@ -7,7 +7,13 @@
   .prices-distribution {
     padding: 50px 100px;
     text-align: center;
+
+    .tableFloatingHeaderOriginal {
+      background-color: #fff;
+    }
   }
+
+
   .fuel-grade-distribution + .fuel-grade-distribution {
     margin-left: 50px;
   }

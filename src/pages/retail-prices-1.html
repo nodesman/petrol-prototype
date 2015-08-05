@@ -206,6 +206,51 @@ scripts:
             </tbody>
           </table>
         </div>
+        <div class="fuel-grade-distribution">
+          <div class="fuel-grade">LPG</div>
+          <table>
+            <thead>
+            <tr>
+              <th>Price</th>
+              <th>Previous Day</th>
+              <th>Selected Day</th>
+              <th>Next Day</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>78.90</td>
+              <td>1</td>
+              <td>2</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>78.90</td>
+              <td>1</td>
+              <td>2</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>78.90</td>
+              <td>1</td>
+              <td>2</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>78.90</td>
+              <td>1</td>
+              <td>2</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>78.90</td>
+              <td>1</td>
+              <td>2</td>
+              <td>4</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
     <div class="prices-list-tab tab-pane" id="price-list" role="tabpanel">
@@ -237,6 +282,12 @@ scripts:
         contextMenu: false
       });
 
+      $(".fuel-grade-distribution table").each(function (index, element) {
+         $(element).stickyTableHeaders({
+           scrollableArea: $(".prices-distribution").get(0),
+          fixedOffset: 0
+        })
+      });
       $("a[data-toggle=tab]").on("shown.bs.tab", function () {
         hot.render();
       });
