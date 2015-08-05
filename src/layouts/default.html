@@ -1,20 +1,25 @@
-<html lang="en"><head>
+<html lang="en">
+<head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="cache-control" content="no-cache">
   <meta http-equiv="pragma" content="no-cache">
   <title>Morrisons Petrol Management System</title>
   <link href="{{assets}}/css/style.css" rel="stylesheet">
+  {{#each styles}}
+  <link href="{{.}}" rel="stylesheet">
+  {{/each}}
   <script src="{{assets}}/js/all.js"></script>
-  </head>
+</head>
 <body>
 <div>
   {{>nav}}
 </div>
- {{body}}
-
+<div class="body">
+  {{body}}
+</div>
 {{#each scripts}}
-  <script src="assets/js/{{.}}"></script>
+<script src="{{.}}"></script>
 {{/each}}
 </body>
 </html>

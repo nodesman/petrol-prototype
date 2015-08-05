@@ -1,0 +1,62 @@
+.retail-prices {
+
+  .prices-list-tab {
+  }
+
+  .prices-distribution {
+    height: 600px;
+    width: 100%;
+    overflow: auto;
+  }
+
+  .hot {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+  }
+
+
+  .nav.nav-tabs {
+    margin-left: 20px;
+    li {
+      float: none;
+      display: inline-block;
+      a {
+        padding: 5px 20px;
+        font-weight: bold;
+      }
+    }
+  }
+  .prices-list, .prices-distribution {
+    tr:first-of-type, tr:nth-of-type(2) {
+      td {
+        text-align: center;
+      }
+    }
+    tr {
+
+      td {
+        text-align: right;
+      }
+      td:first-child {
+        text-align: left;
+      }
+    }
+  }
+  .handsontable {
+     table {
+       width: 100%;
+     }
+  }
+  .handsontable td {
+    padding: 5px 10px;
+  }
+
+  .toolbar-container {
+    h3 {
+      padding-top: 0;
+    }
+  }
+  .ht_clone_left.handsontable {
+  }
+}

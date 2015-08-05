@@ -63,6 +63,9 @@
 $ionicons-font-path: "/assets/fonts/ionicons";
 @import "vendor/ionicons/ionicons";
 
+@import "pages/retailprices";
+@import "pages/page";
+
 .navbar-fixed-top {
   z-index: $navigation-bar-zIndex;
 }
@@ -126,3 +129,4 @@ $ionicons-font-path: "/assets/fonts/ionicons";
     @extend .toast;
   }
 }
+
