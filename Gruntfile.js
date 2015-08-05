@@ -98,7 +98,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'dist/assets/js/all.js': ['src/assets/js/jquery.min.js', 'bower_components/bootstrap/dist/js/bootstrap.min.js']
+          'dist/assets/js/all.js': ['src/assets/js/jquery.min.js', 'bower_components/bootstrap/dist/js/bootstrap.min.js', 'src/assets/js/app.js']
         }
       }
     },

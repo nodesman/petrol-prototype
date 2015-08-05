@@ -1,13 +1,11 @@
 <div class="input-group date-chooser-container">
     <span class="input-group-btn">
-    <button type="button" class="form-control btn btn-default" title="{{previousButtonTitle}}"
-            v-on="click: previousDay()">
+    <button type="button" class="form-control btn btn-default" title="{{previousButtonTitle}}">
       <span class="glyphicon glyphicon-chevron-left"></span></button>
     </span>
-  <input class="form-control date" type="text" placeholder="{{placeholderText}}" value="{{dateStr}}">
+  <input class="form-control date datepicker" type="text" placeholder="{{placeholderText}}" value="{{dateStr}}">
     <span class="input-group-btn">
-    <button type="button" class="form-control btn btn-default" title="{{nextButtonTitle}}" v-on="click: nextDay()"
-            v-attr="disabled: !isNextAllowed()"><span class="glyphicon glyphicon-chevron-right"></span>
+    <button type="button" class="form-control  btn btn-default" title="{{nextButtonTitle}}"><span class="glyphicon glyphicon-chevron-right"></span>
     </button>
     </span>
 </div>
