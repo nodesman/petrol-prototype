@@ -13,6 +13,33 @@
     }
   }
 
+  .floating-header {
+    .tableFloatingHeaderOriginal {
+      background-color: #fff;
+    }
+  }
+  .price-info {
+    text-align: center;
+
+    .data {
+      width: 800px;
+
+      .tableFloatingHeaderOriginal {
+        background-color: #fff;
+        box-shadow: 0 0 10px #ccc;
+      }
+
+      tr td:first-child {
+        width: 40%;
+      }
+    }
+  }
+  .fuel-grade-distribution {
+    text-align: center;
+    table {
+      display: inline-block;
+    }
+  }
 
   .fuel-grade-distribution + .fuel-grade-distribution {
     margin-left: 50px;
