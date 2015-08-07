@@ -1,5 +1,5 @@
 'use strict';
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
   require('time-grunt')(grunt);
   require('load-grunt-tasks')(grunt);
@@ -34,7 +34,6 @@ module.exports = function(grunt) {
       options: {
         port: 9000,
         livereload: 35729,
-        // change this to '0.0.0.0' to access the server from outside
         hostname: 'localhost'
       },
       livereload: {
@@ -79,6 +78,11 @@ module.exports = function(grunt) {
           cwd: 'src/assets/images/',
           src: ['**'],
           dest: 'dist/assets/images/'
+        }, {
+          expand: true,
+          src: ['**'],
+          cwd: 'src/assets/js/pages/',
+          dest: 'dist/assets/js/pages/'
         }]
       }
     },
@@ -92,13 +96,10 @@ module.exports = function(grunt) {
       }
     },
 
-    uglify: {
-      options: {
-        mangle: false
-      },
+    concat: {
       dist: {
         files: {
-          'dist/assets/js/all.js': ['src/assets/js/jquery.min.js', 'src/assets/js/jquery.stickytableheaders.js', 'bower_components/bootstrap/dist/js/bootstrap.min.js', 'src/assets/js/app.js']
+          'dist/assets/js/all.js': ['src/assets/js/jquery.min.js', 'src/assets/js/jquery.stickytableheaders.js', 'bower_components/bootstrap/dist/js/bootstrap.min.js']
         }
       }
     },
@@ -111,23 +112,22 @@ module.exports = function(grunt) {
           loadPath: "bower_components/bootstrap-sass-official/assets/stylesheets"
         },
         files: {
-          'dist/assets/css/style.css' : 'src/assets/scss/morrisons-petrol.scss'
+          'dist/assets/css/style.css': 'src/assets/scss/morrisons-petrol.scss'
         }
       }
     },
     clean: ['<%= config.dist %>/**/*.{html,xml}']
-
   });
 
   grunt.loadNpmTasks('assemble');
   grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-htmlclean');
 
   grunt.registerTask('build', [
     'clean',
     'copy',
-    'uglify',
+    'concat',
     'sass',
     'assemble',
     'htmlclean'
