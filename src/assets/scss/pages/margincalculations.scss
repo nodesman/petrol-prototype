@@ -82,7 +82,11 @@
 
   .hsplitbar {
     height: 8px;
-    background-color: #4d6845;
+    background: no-repeat 50% 0;
+    background-size: contain;
+    background-image: url("../images/splitter.png");
+    background-color: #8f8f8f;
+    background-position: calc(50%-88) 0;
   }
   .first-table {
     height: $first_table_height;

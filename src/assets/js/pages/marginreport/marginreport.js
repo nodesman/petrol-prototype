@@ -4,7 +4,10 @@
     data: marginDistributionData,
     stretchH: 'all',
     mergeCells: [
-      {row: 0, col: 1, rowspan: 1, colspan: 5}
+      {row: 0, col: 1, rowspan: 1, colspan: 5},
+      {row: 0, col: 6, rowspan: 1, colspan: 5},
+      {row: 0, col: 11, rowspan: 1, colspan: 5},
+      {row: 0, col: 16, rowspan: 1, colspan: 5}
     ],
     colHeaders: false,
     contextMenu: false,
