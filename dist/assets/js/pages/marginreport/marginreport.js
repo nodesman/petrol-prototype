@@ -12,7 +12,7 @@
     colHeaders: false,
     contextMenu: false,
     fixedRowsTop: 2,
-    fixedRowsLeft: 1,
+    fixedColumnsLeft: 1,
     afterInit: function () {
       this.render();
     }
@@ -33,7 +33,7 @@
     colHeaders: false,
     contextMenu: false,
     fixedRowsTop: 1,
-    fixedRowsLeft: 1
+    fixedColumnsLeft: 1
   });
 
   $(".splitter-container").splitter({

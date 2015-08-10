@@ -19,8 +19,8 @@
     height: calc(100% - #{$toolbarHeight});
   }
 
-  .ht_clone_top {
-    box-shadow: 0 0 10px #999;
+  .ht_clone_top, .ht_clone_left {
+    box-shadow: 0 0 4px #999;
     background-color: #fff;
     .wtHider {
       padding: 0 !important;
