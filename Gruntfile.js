@@ -99,7 +99,11 @@ module.exports = function (grunt) {
     concat: {
       dist: {
         files: {
-          'dist/assets/js/all.js': ['src/assets/js/jquery.min.js', 'src/assets/js/jquery.stickytableheaders.js', 'bower_components/bootstrap/dist/js/bootstrap.min.js']
+          'dist/assets/js/all.js': [
+            'src/assets/js/jquery.min.js',
+            'src/assets/js/jquery.stickytableheaders.js',
+            'src/assets/js/splitter.js',
+            'bower_components/bootstrap/dist/js/bootstrap.min.js']
         }
       }
     },

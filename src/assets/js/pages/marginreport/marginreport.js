@@ -9,19 +9,41 @@
     colHeaders: false,
     contextMenu: false,
     fixedRowsTop: 2,
+    fixedRowsLeft: 1,
     afterInit: function () {
       this.render();
     }
   });
 
-  var secondContainer = document.querySelector(".second-table .container");
+  $.browser = {
+    ie: false,
+    opera: false
+  };
 
+  $.curCSS = $.css;
+
+  var secondContainer = document.querySelector(".second-table .container");
   var secondTable = new Handsontable(secondContainer, {
     data: sitemargins,
     minSpareRows: 1,
     stretchH: 'all',
     colHeaders: false,
     contextMenu: false,
-    fixedRowsTop: 1
+    fixedRowsTop: 1,
+    fixedRowsLeft: 1
   });
+
+  $(".splitter-container").splitter({
+    type: "h",
+    sizeTop: true,
+    accessKey: "P"
+  });
+
+  setTimeout(function () {
+    $(".margin-calculations").on('mouseup', ".hsplitbar", function () {
+      firstTable.render();
+      secondTable.render();
+    });
+  },100);
+
 }());
