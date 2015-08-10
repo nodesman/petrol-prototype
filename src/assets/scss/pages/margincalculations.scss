@@ -1,6 +1,37 @@
 .margin-calculations {
   $first_table_height: 265px;
   $toolbarHeight: 75px;
+
+  .container {
+    width: auto;
+    padding: 0;
+  }
+  &.tabbed {
+    $navHeight: 55px;
+    .nav {
+      height: $navHeight;
+    }
+
+    .nav.nav-tabs {
+      margin-left: 20px;
+      height: auto;
+      li {
+        a {
+          padding: 10px 20px;
+        }
+      }
+    }
+
+    .tabbed-body {
+      height: calc(100% - #{$toolbarHeight});
+    }
+    .tab-content {
+      height: calc(100% - #{$navHeight});
+      .tab-pane, .container {
+        height: 100%;
+      }
+    }
+  }
   @include clearfix();
   .fixed {
     position: absolute;
@@ -19,13 +50,16 @@
     height: calc(100% - #{$toolbarHeight});
   }
 
-  .ht_clone_top, .ht_clone_left {
-    box-shadow: 0 0 4px #999;
-    background-color: #fff;
-    .wtHider {
-      padding: 0 !important;
+  .non-tabbed {
+    .ht_clone_top, .ht_clone_left {
+      box-shadow: 0 0 4px #eee;
+      background-color: #fff;
+      .wtHider {
+        padding: 0 !important;
+      }
     }
   }
+
   .section {
     position: relative;
     $heading: 30px;

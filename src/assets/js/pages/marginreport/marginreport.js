@@ -42,10 +42,21 @@
     accessKey: "P"
   });
 
+  $("a[data-toggle=tab]").on("shown.bs.tab", function () {
+    firstTable.render();
+    secondTable.render();
+    setTimeout(function () {
+      firstTable.render();
+      secondTable.render();
+    },100);
+
+  });
+
   setTimeout(function () {
     $(".margin-calculations").on('mouseup', ".hsplitbar", function () {
       firstTable.render();
       secondTable.render();
+
     });
   },100);
 
