@@ -9,6 +9,9 @@
   right: 0;
   z-index: $data-table-toolbar-zIndex;
 
+  &.inline {
+    position: static;
+  }
   .form-group {
     margin-bottom: 0;
   }

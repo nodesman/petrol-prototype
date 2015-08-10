@@ -1,10 +1,38 @@
 ---
 layout: default.html
+styles:
+- https://cdnjs.cloudflare.com/ajax/libs/handsontable/0.16.1/handsontable.full.css
+scripts:
+- https://cdnjs.cloudflare.com/ajax/libs/handsontable/0.16.1/handsontable.full.js
+- assets/js/pages/marginreport/consolidated-data.js
+- assets/js/pages/marginreport/sitemargins.js
+- assets/js/pages/marginreport/marginreport.js
 ---
 <div class="margin-calculations">
-
   <div class="toolbar-container inline">
+    <div class="week-picker">
+        {{>datepicker}}
+      <p>Week: 32 | Aug 03 - Aug 09</p>
+    </div>
     <h3>Margin Calculations</h3>
-    <div class="week-picker"><input type="text" name="datepicker" /></div>
+  </div>
+  <div class="first-table section">
+    <h3>Projected and Historical</h3>
+    <div class="container">
+
+    </div>
+  </div>
+
+  <div class="second-table section">
+    <h3>Sitewise Distribution</h3>
+    <div class="container">
+
+    </div>
   </div>
 </div>
+
+<style>
+  .body, .margin-calculations {
+    height: 100%;
+  }
+</style>

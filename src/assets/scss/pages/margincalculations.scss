@@ -1,0 +1,79 @@
+.margin-calculations {
+  $first_table_height: 265px;
+  $toolbarHeight: 75px;
+  @include clearfix();
+  .fixed {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+
+  }
+
+  .toolbar-container {
+    padding-top: 0;
+  }
+
+  .section {
+    position: relative;
+    $heading: 30px;
+    h3 {
+      height: $heading;
+      box-sizing: border-box;
+      font-size: 14px;
+      margin: 0 15px;
+      padding: 5px 0;
+    }
+    .container {
+      padding: 0;
+      height: calc(100% - #{$heading});
+      overflow: auto;
+      margin: 0;
+      width: 100%;
+    }
+  }
+  .week-picker {
+    float: right;
+    width: 300px;
+    margin-right: 10px;
+    p {
+      text-align: center;
+      margin: 10px 0;
+    }
+  }
+
+  .handsontable table {
+    tr:first-child {
+      td {
+        text-align: center;
+      }
+    }
+    td {
+      padding: 4px 15px;
+      text-align: right;
+      &:first-child {
+        text-align: left;
+      }
+    }
+  }
+
+  .toolbar-container {
+    margin: 0;
+    height: $toolbarHeight;
+    box-sizing: border-box;
+  }
+
+  .first-table {
+    height: $first_table_height;
+    overflow: auto;
+  }
+
+  .second-table {
+    height: calc(100% - #{$first_table_height + $toolbarHeight});
+    overflow: auto;
+  }
+
+  h3 {
+    margin: 0;
+  }
+}
