@@ -1,5 +1,22 @@
 (function () {
   var container = document.querySelector(".first-table .container");
+
+
+  $.browser = {
+    ie: false,
+    opera: false
+  };
+
+  $.curCSS = $.css;
+
+
+
+  $(".splitter-container").splitter({
+    type: "h",
+    sizeTop: true,
+    accessKey: "P"
+  });
+
   var firstTable = new Handsontable(container, {
     data: marginDistributionData,
     stretchH: 'all',
@@ -18,13 +35,6 @@
     }
   });
 
-  $.browser = {
-    ie: false,
-    opera: false
-  };
-
-  $.curCSS = $.css;
-
   var secondContainer = document.querySelector(".second-table .container");
   var secondTable = new Handsontable(secondContainer, {
     data: sitemargins,
@@ -35,13 +45,6 @@
     fixedRowsTop: 1,
     fixedColumnsLeft: 1
   });
-
-  $(".splitter-container").splitter({
-    type: "h",
-    sizeTop: true,
-    accessKey: "P"
-  });
-
   $("a[data-toggle=tab]").on("shown.bs.tab", function () {
     firstTable.render();
     secondTable.render();
@@ -56,7 +59,6 @@
     $(".margin-calculations").on('mouseup', ".hsplitbar", function () {
       firstTable.render();
       secondTable.render();
-
     });
   },100);
 

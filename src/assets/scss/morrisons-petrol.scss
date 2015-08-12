@@ -58,6 +58,7 @@
 @import "partials/price-change";
 
 @import "vendor/date-picker";
+@import "vendor/handsontable";
 @import "components/import_box";
 
 $ionicons-font-path: "/assets/fonts/ionicons";
@@ -70,9 +71,11 @@ $ionicons-font-path: "/assets/fonts/ionicons";
 .navbar-fixed-top {
   z-index: $navigation-bar-zIndex;
 }
+
 .dropdown-menu {
   z-index: $navigation-dropdown-menu;
 }
+
 .navbar-nav.nav {
   li.selected {
     background-color: #14806E;

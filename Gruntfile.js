@@ -86,7 +86,6 @@ module.exports = function (grunt) {
         }]
       }
     },
-
     htmlclean: {
       deploy: {
         expand: true,
@@ -95,12 +94,15 @@ module.exports = function (grunt) {
         dest: 'dist/'
       }
     },
-
     concat: {
       dist: {
+        options: {
+          verbose: true
+        },
         files: {
           'dist/assets/js/all.js': [
             'src/assets/js/jquery.min.js',
+            'src/assets/js/handsontable.full.js',
             'src/assets/js/jquery.stickytableheaders.js',
             'src/assets/js/splitter.js',
             'bower_components/bootstrap/dist/js/bootstrap.min.js']
@@ -110,7 +112,6 @@ module.exports = function (grunt) {
     sass: {
       dist: {
         options: {
-          update: true,
           sourcemap: 'inline',
           style: 'compressed',
           loadPath: "bower_components/bootstrap-sass-official/assets/stylesheets"
