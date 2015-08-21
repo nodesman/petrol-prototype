@@ -2,7 +2,27 @@
 .datepicker {
   z-index: 1000 !important;
 }
+
 .retail-prices {
+
+  &.variant-three {
+
+    .prices-list-tab {
+      table {
+        width: 100%;
+        tr {
+          td {
+            padding: 10px 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .tableFloatingHeaderOriginal {
+  background-color: #fff;
+  box-shadow: 0 0 5px #aaa;
+  }
 
   .prices-distribution {
     padding: 50px 100px;
@@ -26,12 +46,25 @@
 
       .tableFloatingHeaderOriginal {
         background-color: #fff;
-        box-shadow: 0 0 10px #ccc;
+        box-shadow: 0 0 10px #cfcfcf;
       }
 
       tr td:first-child {
         width: 40%;
       }
+    }
+  }
+
+  #prices-sitewise {
+  thead {
+  border-bottom: 1px solid #ccc;
+  }
+    td, th {
+     border-right: 1px solid #ccc;
+    }
+
+    tr:nth-of-type(2n) {
+      background-color: #eee;
     }
   }
   .fuel-grade-distribution {
@@ -63,7 +96,6 @@
             text-align: left !important;
           }
 
-
           padding: 10px 20px;
           text-align: right !important;
         }
@@ -85,7 +117,7 @@
       th {
         text-align: center;
       }
-      th,td {
+      th, td {
         padding: 10px 20px;
       }
     }
@@ -96,7 +128,6 @@
     height: 100%;
     overflow: auto;
   }
-
 
   .nav.nav-tabs {
     margin-left: 20px;
@@ -110,28 +141,50 @@
     }
   }
   .prices-list, .prices-distribution {
-    tr:first-of-type, tr:nth-of-type(2) {
-      td {
+
+  thead {
+    th {
+      padding: 10px;
+    }
+  }
+
+  .left {
+    float: left;
+  }
+
+  .right {
+    float: right;
+  }
+
+  .lower, .higher {
+    font-size: 14px;
+  }
+
+  .lower {
+    color: #D85549;
+  }
+
+  .higher {
+    color: #4BB16B;
+  }
+    tr {
+      th, td {
         text-align: center;
       }
     }
     tr {
-
-      td {
-        text-align: right;
-      }
-      td:first-child {
+      th:first-child, td:first-child {
         text-align: left;
       }
     }
   }
   .handsontable {
-     table {
-       width: 100%;
-     }
+    table {
+      width: 100%;
+    }
   }
   .handsontable td {
-    padding: 5px 10px;
+    padding: 5px 5px;
   }
 
   .toolbar-container {
